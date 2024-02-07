@@ -1,0 +1,50 @@
+{
+  "name": "flying-lama/toggl-api",
+  "type": "library",
+  "description": "A PHP client implementation for Toggl API",
+  "keywords": ["toggl","api", "php"],
+  "homepage": "https://flying-lama.com/",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Christoph Müller",
+      "email": "christoph@flying-lama.com",
+      "homepage": "https://flying-lama.com/",
+      "role": "Developer"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "FlyingLama\\TogglApi\\": "src/"
+    },
+    "files": [
+      "src/helpers.php"
+    ]
+  },
+  "require": {
+    "guzzlehttp/guzzle": "^7.0"
+  },
+  "require-dev": {
+    "squizlabs/php_codesniffer": "^3.7",
+    "escapestudios/symfony2-coding-standard": "2.*",
+    "phpmd/phpmd": "^2.15"
+  },
+  "scripts": {
+    "phpcs": [
+      "./vendor/bin/phpcs --standard=phpcs.xml ./src"
+    ],
+    "phpmd": [
+      "./vendor/bin/phpmd app,tests text phpmd.xml"
+    ],
+    "analyse": [
+      "@phpcs",
+      "@phpmd"
+    ],
+    "beautify": [
+      "./vendor/bin/phpcbf --standard=phpcs.xml ./src"
+    ],
+    "analyze": [
+      "@analyse"
+    ]
+  }
+}
