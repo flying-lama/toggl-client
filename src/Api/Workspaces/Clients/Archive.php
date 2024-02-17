@@ -15,7 +15,7 @@ class Archive extends AbstractApi
      * Archives a workspace client and related projects. (Only for premium workspaces)
      *
      * Note:
-     * Instead of a response object, an array is returned because without a subscription testing is not possible.
+     * Instead of an entity object, a response object is returned because without a subscription testing isn't possible.
      * Also the official API docs do not clearly describe what exactly is returned here - Feedback is welcome!
      *
      * @param int $workspaceId Workspace ID
